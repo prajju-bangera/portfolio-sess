@@ -1,0 +1,357 @@
+.booking-page {
+    min-height: 100vh;
+    padding: 140px 0 80px;
+    background: var(--bg-black);
+    color: var(--text-main);
+    position: relative;
+    overflow: hidden;
+}
+
+.booking-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, var(--google-red) 0%, transparent 70%);
+    filter: blur(100px);
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.booking-container {
+    position: relative;
+    z-index: 10;
+}
+
+.booking-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 100;
+}
+
+.nav-pill {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.nav-pill:hover {
+    background: var(--google-red);
+    border-color: var(--google-red);
+    box-shadow: 0 0 20px rgba(234, 67, 53, 0.4);
+}
+
+.unique-progress {
+    flex: 1;
+    max-width: 600px;
+    margin: 0 40px;
+    position: relative;
+}
+
+.progress-track {
+    height: 4px;
+    background: var(--glass-border);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--google-red);
+    transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+    box-shadow: 0 0 20px var(--google-red);
+}
+
+.step-nodes {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.node-num {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-dark-gray);
+    border: 2px solid var(--glass-border);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    transition: var(--transition);
+    color: var(--text-muted);
+}
+
+.node.active .node-num {
+    background: var(--google-red);
+    border-color: var(--google-red);
+    color: white;
+    box-shadow: 0 0 20px rgba(234, 67, 53, 0.3);
+}
+
+.node-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.node.active .node-label {
+    color: white;
+}
+
+.step-title-box {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.step-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.step-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Step 1: Session Grid */
+.session-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 40px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.session-card {
+    cursor: pointer;
+    text-align: center;
+}
+
+.session-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--google-red);
+    transform: translateY(-10px);
+}
+
+.session-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 25px;
+}
+
+.session-card:hover .session-icon {
+    color: var(--google-red);
+    transform: scale(1.1);
+}
+
+.session-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.session-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.session-price {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+}
+
+/* Step 2: Form */
+.booking-form {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.input-group input {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--glass-border);
+    padding: 18px 20px;
+    border-radius: 12px;
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--google-red);
+    box-shadow: 0 0 20px rgba(234, 67, 53, 0.2);
+}
+
+.submit-booking-btn {
+    width: 100%;
+    padding: 20px;
+    background: var(--google-red);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    transition: var(--transition);
+}
+
+.submit-booking-btn:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 0 40px rgba(234, 67, 53, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Step 3: Payment */
+.payment-box {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.scanner-container {
+    margin: 40px 0;
+}
+
+.scanner-frame {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    border: 30px solid transparent;
+    border-image: linear-gradient(to bottom right, var(--google-red), transparent, var(--google-red)) 30;
+    position: relative;
+}
+
+.qr-placeholder {
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--google-red);
+    box-shadow: 0 0 15px var(--google-red);
+    animation: scan 3s infinite linear;
+}
+
+@keyframes scan {
+    0% { top: 0; }
+    50% { top: 100%; }
+    100% { top: 0; }
+}
+
+.confirm-btn {
+    width: 100%;
+    padding: 18px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.confirm-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .session-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 968px) {
+    .session-grid { grid-template-columns: repeat(2, 1fr); }
+    .form-grid { grid-template-columns: 1fr; }
+    .step-title { font-size: 2rem; }
+}
+
+@media (max-width: 576px) {
+    .session-grid { grid-template-columns: 1fr; }
+}
