@@ -113,18 +113,18 @@ const Hero = () => {
                 <div className="hero-content" ref={contentRef}>
                     <h1 style={{textTransform: 'uppercase', lineHeight: '1.2', letterSpacing: '0.15rem', fontSize: 'clamp(2.5rem, 6vw, 4.2rem)'}}>
                         <span style={{fontSize: '1rem', display: 'block', marginBottom: '0.8rem', color: 'var(--text-muted)', letterSpacing: '0.25rem', fontWeight: '500'}}>Hello, I am</span>
-                        <span style={{color: 'var(--google-red)'}}>GODDESS</span> <span style={{color: 'var(--primary)'}}>ESHANI</span>
+                        <span style={{color: 'var(--google-red)'}}>GODDESS</span> <span style={{color: 'var(--primary)'}}>PRIYA SHARMA</span>
                     </h1>
                     <div style={{minHeight: '4.5rem'}}>
                         <p id="typing-text" style={{fontWeight: 500, fontSize: '1.3rem', color: 'var(--text-main)', opacity: 0}}>
-                            Exploring the boundaries of power, authority, and elegance. <br/>
-                            A sanctuary for those who seek the path of Femdom and Mistress Domination.
+                            Married. Age 35+. High class woman from Jaipur. <br/>
+                            Brutal but lovable, aggressive but passionate. Thick and powerful.
                         </p>
                     </div>
                     <div className="hero-tags" style={{display: 'flex', gap: '1.2rem', marginBottom: '1.5rem'}}>
-                        <span style={{color: 'var(--google-yellow)', fontWeight: 600, fontSize: '0.9rem'}}>#femdom</span>
-                        <span style={{color: 'var(--google-green)', fontWeight: 600, fontSize: '0.9rem'}}>#dominant</span>
-                        <span style={{color: 'var(--primary)', fontWeight: 600, fontSize: '0.9rem'}}>#session</span>
+                        <span style={{color: 'var(--google-yellow)', fontWeight: 600, fontSize: '0.9rem'}}>#highclass</span>
+                        <span style={{color: 'var(--google-green)', fontWeight: 600, fontSize: '0.9rem'}}>#jaipur</span>
+                        <span style={{color: 'var(--primary)', fontWeight: 600, fontSize: '0.9rem'}}>#married</span>
                     </div>
 
                    

@@ -150,10 +150,10 @@ const About = () => {
                         <span className="label-text">About Me</span>
                     </div>
                     <h2 className="about-title">
-                        Dominating Your Digital <span className="highlight">Submission</span> Is My Command
+                        A High Class <span className="highlight">Experience</span> With Priya Sharma
                     </h2>
                     <p className="about-description" ref={textRef}>
-                        I am Goddess Eshani, and I establish absolute authority over the digital world. My code is not just a tool; it is a declaration of power. I command every pixel to bend to my will, ensuring your presence is not merely seen, but felt as a force of total domination.
+                        I am GODDESS Priya Sharma, a high-class married woman of 35+ from Jaipur. Brutal but lovable, aggressive but passionate, I possess a thick and commanding presence. My session is an experience of refined authority and intense emotion.
                     </p>
                     
                     <div className="about-stats" ref={statsRef}>
