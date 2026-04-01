@@ -11,6 +11,15 @@ const Navbar = () => {
 
     const [activeSection, setActiveSection] = useState('home');
 
+    // Entrance Animation
+    useEffect(() => {
+        const tl = gsap.timeline({ defaults: { ease: 'expo.out', duration: 1.5 } });
+        tl.fromTo(logoRef.current, { opacity: 0, x: -30 }, { opacity: 1, x: 0 }, '0.5')
+          .fromTo(navLinksRef.current.children, { opacity: 0, y: -20 }, { opacity: 1, y: 0, stagger: 0.1 }, '-=1.2')
+          .fromTo(buttonRef.current, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1 }, '-=1.2');
+    }, []);
+
+    // Scroll Management (Scroll Spy & Sticky Nav)
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 20);
@@ -25,20 +34,14 @@ const Navbar = () => {
                 }
                 return false;
             });
-            if (current && current !== activeSection) {
-                setActiveSection(current);
+            
+            if (current) {
+                setActiveSection(prev => (current !== prev ? current : prev));
             }
         };
-        window.addEventListener('scroll', handleScroll);
-        
-        // Initial call
-        handleScroll();
 
-        // GSAP Entrance
-        const tl = gsap.timeline({ defaults: { ease: 'expo.out', duration: 1.5 } });
-        tl.fromTo(logoRef.current, { opacity: 0, x: -30 }, { opacity: 1, x: 0 }, '0.5')
-          .fromTo(navLinksRef.current.children, { opacity: 0, y: -20 }, { opacity: 1, y: 0, stagger: 0.1 }, '-=1.2')
-          .fromTo(buttonRef.current, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1 }, '-=1.2');
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll(); // Initial call
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
